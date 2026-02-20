@@ -82,5 +82,8 @@ section:nth-child(odd) aside {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-around;
 }
