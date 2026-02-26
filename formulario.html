@@ -5,35 +5,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crear cuenta</title>
+  <link rel="stylesheet" href="estilos/dublin.css">
   <link rel="stylesheet" href="estilos/estilos.css">
+  <script src="javascript/codigo.js" defer></script>
 </head>
 
 <body>
-  <h1>Regístrate ahora</h1>
-  <form name="datos">
-    <fieldset>
-      <legend>Crear cuenta</legend>
-      <fieldset id="nombreapellidos">
-        <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="apellido1">Primer apellido: </label>
-        <input type="text" name="apellido1" id="apellido1">
-        <label for="apellido2">Segundo apellido: </label>
-        <input type="text" name="apellido2" id="apellido2">
-      </fieldset><br>
-      <label for="nacimiento">Fecha de Nacimiento: </label>
-      <input type="date" name="nacimiento" id="nacimiento"><br>
-      <label for="email">Correo electrónico: </label>
-      <input type="email" name="email" id="email"><br><br>
-      <fieldset>
-        <label for="passw">Contraseña</label>
-        <input type="password" name="passw" id="passw">
-        <label for="confirmpassw">Confirmar contraseña</label>
-        <input type="password" name="confirmpassw" id="confirmpassw">
-      </fieldset><br>
-      <button type="submit">Enviar</button>
-    </fieldset>
-  </form>
+  <header>
+    <h1>Regístrate ahora</h1>
+    <p style="font-size: .8em;">Los campos marcados con <i>' <span class="mandatoryfield">*</span> '</i> son
+      obligatorios</p>
+  </header>
+
+  <main>
+    <section id="form">
+      <form name="datos">
+        <fieldset id="main" class="vertical">
+          <fieldset id="personalinfo" class="vertical">
+            <legend><b>Información personal</b></legend>
+            <fieldset id="nombreapellidos">
+              <div>
+                <label for="nombre">Nombre <span class="mandatoryfield">*</span></label>
+                <input type="text" name="nombre" id="nombre">
+              </div>
+              <div>
+                <label for="apellido1">Primer apellido <span class="mandatoryfield">*</span></label>
+                <input type="text" name="apellido1" id="apellido1">
+              </div>
+              <div>
+                <label for="apellido2">Segundo apellido</label>
+                <input type="text" name="apellido2" id="apellido2">
+              </div>
+            </fieldset>
+            <div>
+              <label for="nacimiento">Fecha de Nacimiento <span class="mandatoryfield">*</span></label>
+              <input type="date" name="nacimiento" id="nacimiento">
+            </div>
+          </fieldset>
+          <br>
+          <fieldset id="contactinfo" class="vertical">
+            <legend><b>Información de contacto</b></legend>
+            <div>
+              <label for="email">Correo electrónico <span class="mandatoryfield">*</span></label>
+              <input type="email" name="email" id="email">
+              <label for="telefono">Teléfono</label>
+              <input type="text" name="telefono" id="telefono">
+            </div>
+          </fieldset>
+          <br>
+          <fieldset id="passwordinfo" class="vertical">
+            <legend><b>Contraseña</b></legend>
+            <div>
+              <label for="passw">Contraseña <span class="mandatoryfield">*</span></label>
+              <input type="password" name="passw" id="passw">
+            </div>
+            <div>
+              <label for="confirmpassw">Confirmar contraseña <span class="mandatoryfield">*</span></label>
+              <input type="password" name="confirmpassw" id="confirmpassw">
+            </div>
+          </fieldset>
+          <br>
+          <button type="submit" onclick="enviar()">Crear cuenta</button>
+        </fieldset>
+      </form>
+    </section>
+    <p id="registrolabel"></p>
+  </main>
+  <br>
+  <footer>
+    <p id="errorlabel" style="color: red;"></p>
+  </footer>
 </body>
 
 </html>

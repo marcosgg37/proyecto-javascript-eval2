@@ -1,109 +1,62 @@
-body {
-  height: 100%;
-  background-color: #F7F3F4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header {
-  text-align: center;
-}
-
-nav {
-  margin: 30px;
-}
-
-nav a {
-  background-color: #e6e3e3;
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 3px;
-  border: 3px outset #e6e3e3;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: .9em;
-}
-
-nav a:hover {
-  border-style: inset;
-  background-color: #d0cccc;
-}
-
-section {
-  background-color: #FCC990;
-  margin-top: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding: 3%;
-  overflow: auto;
-  border: 10px solid #188B26;
-  box-shadow: 5px 5px 10px;
-}
-
-section:first-child {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-section:last-child {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-section aside {
-  background-color: #E27018;
-  margin: 3%;
-  width: 40%;
-}
-
-section p {
-  text-align: justify;
-}
-
-aside {
-  border-radius: 10px;
-  padding: 1%;
-}
-
-aside p {
-  text-align: center;
-  font-weight: bold;
-}
-
-img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-section:nth-child(even) aside {
-  float: right;
-  margin-right: 0px;
-}
-
-section:nth-child(odd) aside {
-  float: left;
-  margin-left: 0px;
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-form {
-  width: 50%;
-}
+/*
+  Estilos específicos del formulario
+*/
 
 fieldset {
   width: 95%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  border: 0px;
+}
+
+fieldset.vertical {
+  flex-direction: column;
+}
+
+fieldset#main {
+  border: 5px;
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-  width: 50%;
+  width: 90%;
+  background-color: white;
+}
+
+section#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.error {
+  background-color: coral;
+  width: 80;
+}
+
+.errorlabel {
+  color: red;
+}
+
+.mandatoryfield {
+  color: crimson;
+  font-size: .8em;
+}
+
+button[type="submit"] {
+  background-color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: lightgray;
+}
+
+.success {
+  background-color: greenyellow;
 }
