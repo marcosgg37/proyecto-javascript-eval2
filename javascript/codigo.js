@@ -78,7 +78,7 @@ function validarNacimiento(value) {
 function validarEmail(value) {
   error = "";
   if (value.trim() == "") error += "El campo <b>Correo Electrónico</b> es obligatorio"
-  else if (value.match(/.*@.*\..*/) == null) error += "El <b>Correo</b> introducido no tiene un formáto válido"
+  else if (value.match(/.+@.+\..+/) == null) error += "El <b>Correo</b> introducido no tiene un formáto válido"
   return error;
 }
 
